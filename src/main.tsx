@@ -4,6 +4,7 @@ import App from "./App.tsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "react-query";
 import Root from "./component/Root.tsx";
+import "./index.css";
 // import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
 const router = createBrowserRouter([
@@ -15,11 +16,6 @@ const router = createBrowserRouter([
         path: "/",
         element: <App />,
       },
-      {
-        path: "/",
-        element: <App />,
-      },
-
       {
         path: "/RTK-query",
         element: <h1 />,
