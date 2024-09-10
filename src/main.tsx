@@ -5,6 +5,10 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "react-query";
 import Root from "./component/Root.tsx";
 import "./index.css";
+import Products from "./component/Products.tsx";
+import Todos from "./component/Todos.tsx";
+import Users from "./component/Users.tsx";
+import Authentication from "./component/Authentication.tsx";
 // import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
 const router = createBrowserRouter([
@@ -17,8 +21,24 @@ const router = createBrowserRouter([
         element: <App />,
       },
       {
-        path: "/RTK-query",
-        element: <h1 />,
+        path: "/products",
+        element: <Products />,
+      },
+      {
+        path: "/todos",
+        element: <Todos />,
+      },
+      {
+        path: "/users",
+        element: <Users />,
+      },
+      {
+        path: "/auth",
+        element: <Authentication />,
+      },
+      {
+        path: "*",
+        element: <App />,
       },
     ],
   },
